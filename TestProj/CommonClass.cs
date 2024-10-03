@@ -50,29 +50,29 @@ namespace TestProj
         }
 
 
-        public List<AuthorModel> InsertBooks(List<AuthorModel> obj)
+        public List<BooksModel> InsertBooks(List<BooksModel> obj)
         {
             using (var connection = SQL_Connection())
             {
                 var dataTable = CommonStaticClass.ToDataTable(obj);
-
+                dataTable.Columns.Remove("Name");
                 var parameters = new
                 {
                     table = dataTable.AsTableValuedParameter("BookType")
                 };
 
-                return connection.Query<AuthorModel>("BookInsUp", parameters, commandType: CommandType.StoredProcedure).ToList();
+                return connection.Query<BooksModel>("BookInsUp", parameters, commandType: CommandType.StoredProcedure).ToList();
 
             }
         }
 
 
-        public List<AuthorModel> GetBooks()
+        public List<BooksModel> GetBooks()
         {
             using (var connection = SQL_Connection())
             {
 
-                return connection.Query<AuthorModel>("BookGet", commandType: CommandType.StoredProcedure).ToList();
+                return connection.Query<BooksModel>("BookGet", commandType: CommandType.StoredProcedure).ToList();
 
             }
         }

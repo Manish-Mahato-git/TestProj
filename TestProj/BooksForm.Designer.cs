@@ -30,22 +30,22 @@
         {
             btn_Save = new Button();
             dataGridView = new DataGridView();
-            btn_Add = new Button();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txt_BookName = new TextBox();
+            cmbo_Author = new ComboBox();
+            txt_BublishedYr = new TextBox();
+            txt_Genra = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // btn_Save
             // 
-            btn_Save.Location = new Point(574, 97);
+            btn_Save.Location = new Point(572, 20);
             btn_Save.Name = "btn_Save";
             btn_Save.Size = new Size(112, 33);
             btn_Save.TabIndex = 5;
             btn_Save.Text = "Save";
             btn_Save.UseVisualStyleBackColor = true;
+            btn_Save.Click += btn_Save_Click;
             // 
             // dataGridView
             // 
@@ -58,56 +58,46 @@
             dataGridView.Size = new Size(553, 334);
             dataGridView.TabIndex = 4;
             // 
-            // btn_Add
+            // txt_BookName
             // 
-            btn_Add.Location = new Point(574, 23);
-            btn_Add.Name = "btn_Add";
-            btn_Add.Size = new Size(112, 33);
-            btn_Add.TabIndex = 3;
-            btn_Add.Text = "Add";
-            btn_Add.UseVisualStyleBackColor = true;
+            txt_BookName.Location = new Point(15, 29);
+            txt_BookName.Name = "txt_BookName";
+            txt_BookName.Size = new Size(179, 27);
+            txt_BookName.TabIndex = 6;
             // 
-            // textBox1
+            // cmbo_Author
             // 
-            textBox1.Location = new Point(15, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(179, 27);
-            textBox1.TabIndex = 6;
+            cmbo_Author.FormattingEnabled = true;
+            cmbo_Author.Location = new Point(200, 25);
+            cmbo_Author.Name = "cmbo_Author";
+            cmbo_Author.Size = new Size(151, 28);
+            cmbo_Author.TabIndex = 7;
             // 
-            // comboBox1
+            // txt_BublishedYr
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(200, 25);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 7;
+            txt_BublishedYr.Location = new Point(450, 26);
+            txt_BublishedYr.Name = "txt_BublishedYr";
+            txt_BublishedYr.Size = new Size(118, 27);
+            txt_BublishedYr.TabIndex = 8;
             // 
-            // textBox2
+            // txt_Genra
             // 
-            textBox2.Location = new Point(450, 26);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(118, 27);
-            textBox2.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(357, 26);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(87, 27);
-            textBox3.TabIndex = 9;
+            txt_Genra.Location = new Point(357, 26);
+            txt_Genra.Name = "txt_Genra";
+            txt_Genra.Size = new Size(87, 27);
+            txt_Genra.TabIndex = 9;
             // 
             // BooksForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(696, 411);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
+            Controls.Add(txt_Genra);
+            Controls.Add(txt_BublishedYr);
+            Controls.Add(cmbo_Author);
+            Controls.Add(txt_BookName);
             Controls.Add(btn_Save);
             Controls.Add(dataGridView);
-            Controls.Add(btn_Add);
             Name = "BooksForm";
             Text = "BooksForm";
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
@@ -119,10 +109,9 @@
 
         private Button btn_Save;
         private DataGridView dataGridView;
-        private Button btn_Add;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txt_BookName;
+        private ComboBox cmbo_Author;
+        private TextBox txt_BublishedYr;
+        private TextBox txt_Genra;
     }
 }
